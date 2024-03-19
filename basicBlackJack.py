@@ -1,18 +1,18 @@
 import random
 
-# Create a deck of cards
+
 suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
 ranks = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
 deck = [(rank, suit) for suit in suits for rank in ranks]
 
-# Shuffle the deck
+
 random.shuffle(deck)
 
-# Deal initial cards to the player and dealer
+
 player_hand = [deck.pop(), deck.pop()]
 dealer_hand = [deck.pop(), deck.pop()]
 
-# Function to calculate the value of a hand
+
 def calculate_hand_value(hand):
     value = 0
     num_aces = 0
@@ -30,7 +30,7 @@ def calculate_hand_value(hand):
         num_aces -= 1
     return value
 
-# Play the game
+
 while True:
     print("Player's hand:", player_hand)
     print("Dealer's hand:", dealer_hand[0])
